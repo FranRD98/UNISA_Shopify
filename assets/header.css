@@ -9,7 +9,7 @@ announcement-bar-component slideshow-arrows {
 .announcement-bar:has(
     .announcement-bar__slides slideshow-slide:nth-child(3)[aria-hidden="false"]
   ) {
-  background: #d41d1d !important;
+  background: green !important;
 }
 
 /* Transición suave */
