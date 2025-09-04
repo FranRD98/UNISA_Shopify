@@ -1,0 +1,4 @@
+/* Esconder badge de 'oferta' */
+.product-badges.product-badges--top-right {
+  display: none;
+}

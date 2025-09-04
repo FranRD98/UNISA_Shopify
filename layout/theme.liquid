@@ -35,7 +35,15 @@
     {{ content_for_header }}
   </head>
 
-  <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
+  {% comment %}
+    Añadimos la clase "home" al body solo en la página de inicio
+    Esto nos permitirá aplicar estilos CSS específicos para la home
+
+    Esta es la línea original
+    <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
+  {% endcomment %}
+
+  <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }} {% if template.name == 'index' %}home{% endif %}">
     {% render 'skip-to-content-link', href: '#MainContent', text: 'accessibility.skip_to_text' %}
     <div id="header-group">
       {% sections 'header-group' %}
