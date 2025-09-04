@@ -23,8 +23,8 @@
             "horizontal_alignment": "center",
             "vertical_alignment": "flex-end",
             "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
+            "horizontal_alignment_flex_direction_column": "flex-end",
+            "vertical_alignment_flex_direction_column": "flex-end",
             "gap": 12,
             "width": "custom",
             "custom_width": 100,
@@ -50,7 +50,7 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 10
+            "padding-inline-end": 0
           },
           "blocks": {
             "text_xiQye8": {
@@ -73,9 +73,9 @@
                 "background_color": "#00000026",
                 "corner_radius": 0,
                 "padding-block-start": 0,
-                "padding-block-end": 0,
+                "padding-block-end": 50,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 100
               },
               "blocks": {}
             }
@@ -95,8 +95,8 @@
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
+            "horizontal_alignment_flex_direction_column": "flex-end",
+            "vertical_alignment_flex_direction_column": "flex-end",
             "gap": 12,
             "width": "custom",
             "custom_width": 100,
@@ -123,7 +123,7 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 10
+            "padding-inline-end": 0
           },
           "blocks": {
             "text_4bajTw": {
@@ -146,9 +146,9 @@
                 "background_color": "#00000026",
                 "corner_radius": 0,
                 "padding-block-start": 0,
-                "padding-block-end": 0,
+                "padding-block-end": 50,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 100
               },
               "blocks": {}
             }
@@ -169,7 +169,7 @@
             "vertical_alignment": "center",
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "flex-end",
             "gap": 12,
             "width": "custom",
             "custom_width": 100,
@@ -196,7 +196,7 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 10
+            "padding-inline-end": 0
           },
           "blocks": {
             "text_nYK8zx": {
@@ -219,7 +219,7 @@
                 "background_color": "#00000026",
                 "corner_radius": 0,
                 "padding-block-start": 0,
-                "padding-block-end": 0,
+                "padding-block-end": 50,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
@@ -281,8 +281,8 @@
                 "horizontal_alignment": "flex-start",
                 "vertical_alignment": "center",
                 "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
-                "vertical_alignment_flex_direction_column": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-end",
                 "gap": 12,
                 "width": "custom",
                 "custom_width": 100,
@@ -309,7 +309,7 @@
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 10
+                "padding-inline-end": 0
               },
               "blocks": {
                 "text_HGC9Ur": {
@@ -332,8 +332,8 @@
                     "background_color": "#00000026",
                     "corner_radius": 0,
                     "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
+                    "padding-block-end": 50,
+                    "padding-inline-start": 100,
                     "padding-inline-end": 0
                   },
                   "blocks": {}
@@ -343,7 +343,7 @@
                 "text_HGC9Ur"
               ]
             },
-            "group_CGBjdW": {
+            "group_cmjfWG": {
               "type": "group",
               "name": "t:names.group",
               "settings": {
@@ -354,8 +354,8 @@
                 "horizontal_alignment": "flex-start",
                 "vertical_alignment": "center",
                 "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
-                "vertical_alignment_flex_direction_column": "center",
+                "horizontal_alignment_flex_direction_column": "flex-end",
+                "vertical_alignment_flex_direction_column": "flex-end",
                 "gap": 12,
                 "width": "custom",
                 "custom_width": 100,
@@ -382,17 +382,17 @@
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 10
+                "padding-inline-end": 0
               },
               "blocks": {
-                "text_CAMap9": {
+                "text_CNmVPT": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
                     "text": "<p>Bolsos &gt;</p>",
                     "width": "100%",
                     "max_width": "normal",
-                    "alignment": "center",
+                    "alignment": "right",
                     "type_preset": "custom",
                     "font": "var(--font-body--family)",
                     "font_size": "1.125rem",
@@ -405,21 +405,21 @@
                     "background_color": "#00000026",
                     "corner_radius": 0,
                     "padding-block-start": 0,
-                    "padding-block-end": 0,
+                    "padding-block-end": 50,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 100
                   },
                   "blocks": {}
                 }
               },
               "block_order": [
-                "text_CAMap9"
+                "text_CNmVPT"
               ]
             }
           },
           "block_order": [
             "group_D9nQwn",
-            "group_CGBjdW"
+            "group_cmjfWG"
           ]
         }
       },
@@ -428,6 +428,9 @@
         "group_TeCDfT",
         "group_yYB9DY",
         "group_DWK7hP"
+      ],
+      "custom_css": [
+        "p {color: white}"
       ],
       "name": "t:names.custom_section",
       "settings": {
