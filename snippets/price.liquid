@@ -41,13 +41,25 @@
   endif
 -%}
 
+<!-- Contenedor de precio -->
 <div ref="priceContainer">
-  {% if show_sale_price_first == false and show_compare_price %}
-    <span role="group">
-      <span class="visually-hidden">{{ 'content.price_regular' | t }}&nbsp;</span>
-      <span class="compare-at-price">{{- compare_at_price -}}</span>
-    </span>
-  {% endif %}
+  <div class="custom-price {% if has_discount %}has-discount{% endif %}">
+    <div class="price-left">
+      {%- if has_discount -%}
+        <span class="original-price">{{ compare_display }}</span>
+        <span class="discount">-{{ discount_percentage }}%</span> <!-- Descuento en porcentaje -->
+        <span class="final-price">{{ price_display }}</span> <!-- Precio definitivo -->
+      {%- else -%}
+        <span class="final-price">{{ price_display }}</span>
+      {%- endif -%}
+    </div>
+
+    {%- if has_multiple_colors -%}
+      <div class="price-right">
+        <span class="extra-colors">+ colores</span> <!-- Label que se muestra si tienes mas colores -->
+      </div>
+    {%- endif -%}
+  </div>
 
   {% if show_compare_price %}
     <span role="group">
