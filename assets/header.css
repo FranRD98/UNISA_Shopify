@@ -2,7 +2,7 @@
 
 /* Ocultar flechas del slideshow de la barra de anuncios */
 announcement-bar-component slideshow-arrows {
-  display: block;
+  display: none;
 }
 
 /* Cambiar fondo cuando la 3ª slide está activa */
