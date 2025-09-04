@@ -16,7 +16,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
-            "link": "",
+            "link": "shopify://collections/nueva-coleccion-aw25",
             "open_in_new_tab": false,
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -88,7 +88,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
-            "link": "",
+            "link": "shopify://collections/novedades",
             "open_in_new_tab": false,
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -161,7 +161,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
-            "link": "",
+            "link": "shopify://collections/rebajas",
             "open_in_new_tab": false,
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -274,7 +274,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
-                "link": "",
+                "link": "shopify://collections/party",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -347,7 +347,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
-                "link": "",
+                "link": "shopify://collections/bolsos",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -430,7 +430,7 @@
         "group_DWK7hP"
       ],
       "custom_css": [
-        "p {color: white}"
+        "p {color: white;}"
       ],
       "name": "t:names.custom_section",
       "settings": {
