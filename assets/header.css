@@ -2,14 +2,14 @@
 
 /* Ocultar flechas del slideshow de la barra de anuncios */
 announcement-bar-component slideshow-arrows {
-  display: none;
+  display: block;
 }
 
 /* Cambiar fondo cuando la 3ª slide está activa */
 .announcement-bar:has(
     .announcement-bar__slides slideshow-slide:nth-child(3)[aria-hidden="false"]
   ) {
-  background: green !important;
+  background: #d41d1d !important;
 }
 
 /* Transición suave */
