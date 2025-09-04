@@ -58,7 +58,7 @@
               "name": "t:names.text",
               "settings": {
                 "text": "<p>Nueva Colección</p>",
-                "width": "100%",
+                "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "center",
                 "type_preset": "rte",
@@ -75,7 +75,7 @@
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 50
+                "padding-inline-end": 0
               },
               "blocks": {}
             }
@@ -131,7 +131,7 @@
               "name": "t:names.text",
               "settings": {
                 "text": "<p>Nueva Colección</p>",
-                "width": "100%",
+                "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "center",
                 "type_preset": "rte",
@@ -148,7 +148,7 @@
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 50
+                "padding-inline-end": 0
               },
               "blocks": {}
             }
@@ -221,7 +221,7 @@
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 50
+                "padding-inline-end": 0
               },
               "blocks": {}
             }
@@ -334,7 +334,7 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 50
+                    "padding-inline-end": 0
                   },
                   "blocks": {}
                 }
@@ -407,7 +407,7 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 50
+                    "padding-inline-end": 0
                   },
                   "blocks": {}
                 }
