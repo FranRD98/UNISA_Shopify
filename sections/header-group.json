@@ -59,9 +59,7 @@
         "announcement_pwwMCY",
         "announcement_cpdfP7"
       ],
-      "custom_css": [
-        "p {font-weight: 500;}"
-      ],
+      "custom_css": [],
       "name": "t:names.announcement_bar",
       "settings": {
         "speed": 5,
@@ -120,9 +118,9 @@
       },
       "custom_css": [
         "/* Titulo 'Rebajas' a rojo */.menu-list__list-item:has(a[href=\"/collections/rebajas\"]) .menu-list__link-title {color: #e02020;}",
-        ".search-action > button {gap: 0px;}",
         "@media screen and (max-width: 749px) {.search-text, .account-text, .cart-text {display: none; }}"
       ],
+      "name": "Header Menu",
       "settings": {
         "logo_position": "left",
         "menu_position": "left",
