@@ -681,7 +681,7 @@
                       "settings": {
                         "text": "<p>{{ closest.product.metafields.custom.composicion | metafield_tag }}</p>",
                         "width": "100%",
-                        "max_width": "normal",
+                        "max_width": "none",
                         "alignment": "left",
                         "type_preset": "rte",
                         "font": "var(--font-body--family)",
@@ -722,7 +722,7 @@
                       "settings": {
                         "text": "<p>Envío Estándar: 2 días laborables<br/>Envío Express: 1 día laboral<br/><br/>Puedes consultar los gastos de envío en la siguiente tabla: Consúltalo aquí.<br/><br/>En cualquier caso, durante el proceso de compra y antes de realizar el pago te detallamos los gastos de envío.<br/><br/>Nuestro compromiso con el planeta también está presente en nuestros envíos. Todas las cajas de nuestros pedidos son de cartón 100% reciclado y reutilizable. Unisa ❤ the planet<br/><br/>*Para Canarias, Ceuta y Melilla consulta las opciones de envío</p>",
                         "width": "100%",
-                        "max_width": "normal",
+                        "max_width": "none",
                         "alignment": "left",
                         "type_preset": "rte",
                         "font": "var(--font-body--family)",
@@ -763,7 +763,7 @@
                       "settings": {
                         "text": "<p>Tranquila/o, si no estás satisfecha/o puedes devolver tus Unisas sin coste alguno (siempre que el producto no esté usado o dañado). El plazo de devolución es de 30 días. (Más información)<br/><br/>Si quieres devolver recuerda conservar la caja en la que te enviamos tu pedido. Todos nuestros envases son ecológicos y reutilizables. Unisa ❤ the planet<br/><br/>*Para Canarias, Ceuta, Melilla consulta las opciones de devolución.</p>",
                         "width": "100%",
-                        "max_width": "normal",
+                        "max_width": "none",
                         "alignment": "left",
                         "type_preset": "rte",
                         "font": "var(--font-body--family)",
@@ -804,7 +804,7 @@
                       "settings": {
                         "text": "<p>Tranquila/o, si no estás satisfecha/o puedes devolver tus Unisas sin coste alguno (siempre que el producto no esté usado o dañado). El plazo de devolución es de 30 días. (Más información)<br/><br/>Si quieres devolver recuerda conservar la caja en la que te enviamos tu pedido. Todos nuestros envases son ecológicos y reutilizables. Unisa ❤ the planet<br/><br/>*Para Canarias, Ceuta, Melilla consulta las opciones de devolución.</p>",
                         "width": "100%",
-                        "max_width": "normal",
+                        "max_width": "none",
                         "alignment": "left",
                         "type_preset": "rte",
                         "font": "var(--font-body--family)",
