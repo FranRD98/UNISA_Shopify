@@ -4474,3 +4474,17 @@ text-component {
 product-card {
   background-color: #f6f6f6;
 }
+
+/* Cambia los estilos del botón de añadir al carrito */
+add-to-cart-component {
+  text-transform: uppercase;
+}
+add-to-cart-component button:hover {
+  color: black;
+  background-color: white;
+}
+
+/* Añade un subrayado a los enlaces pop-up */
+dialog-component.popup-link {
+  text-decoration: underline;
+}
