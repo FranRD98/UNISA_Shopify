@@ -432,44 +432,18 @@
             {% assign is_active = false %}
 
             {%- for filter in filters -%}
-              <div class="filter-group" style="padding: 1rem; background: rgb(var(--color-background)); border-radius: 6px;">
-                <h3 style="font-size:16px; font-weight:400; margin-bottom: .5rem;">
-                  {{ filter.label }}
-                </h3>
-                <ul class="filter-options" style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:.25rem;">
-                  {%- for value in filter.values limit:3 -%}
-                    <li>
-                      <label style="cursor:pointer;">
-                        <input type="checkbox"
-                               name="{{ value.param_name }}"
-                               value="{{ value.value }}"
-                               {% if value.active %}checked{% endif %}>
-                        {{ value.label }}
-                      </label>
-                    </li>
-                  {%- endfor -%}
-                </ul>
-
-                {% if filter.values.size > 3 %}
-                  <button type="button" class="show-more" data-target="filter-{{ forloop.index }}" style="margin-top:.5rem; background:none; border:none; color:var(--color-accent); cursor:pointer; font-size:14px;">
-                    + Ver más
-                  </button>
-                  <ul id="filter-{{ forloop.index }}" class="filter-options--hidden" style="display:none; list-style:none; padding:0; margin-top:.5rem; display:flex; flex-direction:column; gap:.25rem;">
-                    {%- for value in filter.values offset:3 -%}
-                      <li>
-                        <label style="cursor:pointer;">
-                          <input type="checkbox"
-                                 name="{{ value.param_name }}"
-                                 value="{{ value.value }}"
-                                 {% if value.active %}checked{% endif %}>
-                          {{ value.label }}
-                        </label>
-                      </li>
-                    {%- endfor -%}
-                  </ul>
-                {% endif %}
-              </div>
-            {%- endfor -%}
+  {% case filter.type %}
+    {% when 'price_range' %}
+      {% render 'price-filter', filter: filter, filter_style: 'vertical' %}
+    {% else %}
+      {% render 'list-filter',
+          filter: filter,
+          filter_style: 'vertical',
+          show_swatch_label: block_settings.show_swatch_label,
+          sectionId: section.id
+      %}
+  {% endcase %}
+{%- endfor -%}
           </div>
 
         </form>
