@@ -80,8 +80,19 @@
     padding-inline: var(--facets-inner-padding-inline);
 
     @media screen and (min-width: 750px) {
-      display: none;
+      display: block;
     }
+  }
+
+  .facets-toggle {
+    display: flex !important; /* mantener flex */
+    justify-content: flex-start; /* izquierda */
+    align-items: center;
+    gap: var(--gap-sm); /* opcional para separar icono y texto */
+  }
+
+  .facets-toggle__wrapper {
+    margin-left: 0; /* eliminar offset si quieres alineación perfecta */
   }
 
   .facets-toggle__wrapper {
@@ -92,7 +103,7 @@
     box-shadow: none;
 
     @media screen and (min-width: 750px) {
-      display: none;
+      display: block;
     }
   }
 

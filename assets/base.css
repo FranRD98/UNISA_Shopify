@@ -4488,3 +4488,12 @@ add-to-cart-component button:hover {
 dialog-component.popup-link {
   text-decoration: underline;
 }
+
+/* Modifica el estilo de las acciones de filtrar y ordenar */
+.facets--horizontal.facets-controls-wrapper {
+  text-transform: uppercase;
+}
+
+.facets__label {
+  font-size: 16px; /* Cambia el tamaño del texto de ordenar */
+}

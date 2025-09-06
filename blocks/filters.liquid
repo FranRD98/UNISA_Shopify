@@ -88,6 +88,23 @@
         </span>
       </div>
 
+      <div>
+
+      {% if block_settings.enable_sorting %}
+
+        {% render 'sorting',
+          results: results,
+          sort_by: sort_by,
+          filter_style: block_settings.filter_style,
+          suffix: 'desktop',
+          sort_position: 'desktop',
+          should_use_select_on_mobile: false,
+          section_id: section.id
+        %}
+      
+      {% endif %}
+      </div>
+
       {% if block_settings.enable_sorting %}
         {% render 'sorting',
           results: results,
@@ -105,6 +122,7 @@
       {% endif %}
     </div>
   {% endif %}
+
 
   <div
     class="
@@ -145,6 +163,8 @@
           class="facets__form"
           ref="facetsForm"
         >
+
+          
           {% if should_show_pane %}
             {% render 'filter-remove-buttons',
               filters: filters,
@@ -154,6 +174,8 @@
             %}
 
             {% if block_settings.enable_filtering %}
+
+              
               {% assign total_active_values = 0 %}
 
               {% capture rendered_filters %}
@@ -195,6 +217,7 @@
 
               <div class="facets__filters-wrapper">
                 {% if block_settings.filter_style == 'horizontal' %}
+                  
                   {% liquid
                     assign more_attributes = 'on:click="#filters-drawer/showDialog"'
                     if block_settings.text_label_case == 'uppercase'
@@ -219,28 +242,49 @@
                 should_show_clear_all: should_show_vertical_clear_all
               %}
             {% endif %}
+
+            
             {% if block_settings.filter_style == 'horizontal' %}
-              <div class="products-count-wrapper">
-                <span title="{{ 'content.product_count' | t }}">
-                  {{- 'content.item_count' | t: count: products_count -}}
-                </span>
-              </div>
+<div>
+  {% render 'breadcrumbs' %}
+  <span>{{ collection.description }}</span>
+</div>
+              <div class="products-count-wrapper"></div>
+              
+              <div class="facets--horizontal facets-controls-wrapper" style="display: flex; align-items: center; gap: 8px;">
+                                 
+                    {% if block_settings.enable_grid_density %}
+        {% render 'grid-density-controls', viewport: 'desktop' %}
+      {% endif %}
+  {% if block_settings.enable_filtering %}
+    <div class="facets-toggle__wrapper">
+      <button class="button facets-toggle__button button-unstyled button-unstyled--with-icon filter-button"
+              on:click="#filters-drawer/showDialog" type="button">
+        Filtrar
+      </button>
+    </div>
 
-              {% if block_settings.enable_sorting %}
-                {% render 'sorting',
-                  results: results,
-                  sort_by: sort_by,
-                  filter_style: block_settings.filter_style,
-                  suffix: 'desktop',
-                  sort_position: 'desktop',
-                  should_use_select_on_mobile: false,
-                  section_id: section.id
-                %}
-              {% endif %}
+    <!-- Separador -->
+    <span class="facets-separator">|</span>
+  {% endif %}
 
-              {% if block_settings.enable_grid_density %}
-                {% render 'grid-density-controls', viewport: 'desktop' %}
-              {% endif %}
+  {% if block_settings.enable_sorting %}
+    <div class="sorting-wrapper">
+      {% render 'sorting',
+        results: results,
+        sort_by: sort_by,
+        filter_style: block_settings.filter_style,
+        suffix: 'desktop',
+        sort_position: 'desktop',
+        should_use_select_on_mobile: false,
+        section_id: section.id
+      %}
+    </div>
+  {% endif %}
+</div>
+              
+
+
             {% endif %}
           {% endif %}
         </form>
@@ -255,8 +299,9 @@
       {{ facets_margin_style }}
     "
   >
+    
     {% if block_settings.enable_filtering %}
-      <div class="facets-toggle__wrapper">
+<div class="facets-toggle__wrapper facets-toggle__wrapper--mobile">
         <button
           class="button facets-toggle__button button-unstyled button-unstyled--with-icon"
           on:click="#filters-drawer/showDialog"
@@ -328,7 +373,7 @@
     <dialog
       ref="dialog"
       class="facets facets--drawer dialog-modal drawer dialog-drawer dialog-drawer--right spacing-style"
-      style="{% render 'spacing-style', settings: block_settings %}"
+      style="{% render 'spacing-style', settings: block_settings %}; padding: 1.5rem;"
       scroll-lock
     >
       {% assign form_component = 'FacetFiltersFormComponent--' | append: section.id | append: '-overflow' %}
@@ -344,23 +389,13 @@
           class="facets__form"
           ref="facetsForm"
         >
-          <div
-            class="facets__title-wrapper"
-            style="--color-shadow: rgb(var(--color-foreground-rgb) / var(--opacity-10-25));"
-          >
-            <h2 class="facets-drawer__title h3">
-              {{ 'blocks.filter' | t }}
 
+          <!-- ====== CABECERA ====== -->
+          <div class="facets__title-wrapper" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+            <h2 class="facets-drawer__title h3" style="margin: 0;">
+              {{ 'blocks.filter' | t }}
               {% if total_active_values > 0 %}
-                <span
-                  class="bubble facets__bubble"
-                  aria-hidden="true"
-                >
-                  {{ total_active_values }}
-                </span>
-                <span class="visually-hidden">
-                  {{ 'accessibility.filter_count' | t: count: total_active_values }}
-                </span>
+                <span class="bubble facets__bubble" aria-hidden="true">{{ total_active_values }}</span>
               {% endif %}
             </h2>
             <button
@@ -368,79 +403,77 @@
               on:click="dialog-component/closeDialog"
               type="button"
             >
-              <span
-                class="svg-wrapper svg-wrapper--small"
-                title="{{ 'actions.close' | t }}"
-              >
-                {{ 'icon-close.svg' | inline_asset_content }}
-              </span>
+              {{ 'icon-close.svg' | inline_asset_content }}
             </button>
           </div>
 
-          {% if block_settings.enable_filtering %}
-            {% render 'filter-remove-buttons',
-              filters: filters,
-              results_url: results_url,
-              show_filter_label: block_settings.show_filter_label,
-              should_show_clear_all: false
-            %}
+          <!-- ====== BOTONES SUPERIORES ====== -->
+          <div class="facets__top-actions" style="display: flex; gap: 12px; margin-bottom: 1.5rem;">
+            <button
+              type="reset"
+              class="button button--secondary"
+              style="flex:1; padding: 0.75rem 1rem; font-size: 14px;"
+              on:click="dialog-component/closeDialog"
+            >
+              Limpiar filtros
+            </button>
+            <button
+              type="submit"
+              class="button button--primary"
+              style="flex:1; padding: 0.75rem 1rem; font-size: 14px; border-radius: 0;"
+            >
+              Aplicar{% if total_active_values > 0 %} ({{ total_active_values }}){% endif %}
+            </button>
+          </div>
 
-            <div class="facets__filters-wrapper">
-              {% assign total_active_values = 0 %}
-              {% assign is_active = false %}
+          <!-- ====== LISTA DE FILTROS (plano) ====== -->
+          <div class="facets__filters-wrapper" style="display: flex; flex-direction: column; gap: 1.25rem;">
+            {% assign total_active_values = 0 %}
+            {% assign is_active = false %}
 
-              {%- for filter in filters -%}
-                {%- liquid
-                  assign should_autofocus = false
-                  if forloop.first and total_active_values == 0
-                    assign should_autofocus = true
-                  endif
-                %}
-                {% case filter.type %}
-                  {% when 'price_range' %}
-                    {%- liquid
-                      if filter.min_value.value != null or filter.max_value.value != null
-                        assign total_active_values = total_active_values | plus: 1
-                        assign is_active = true
-                      endif
+            {%- for filter in filters -%}
+              <div class="filter-group" style="padding: 1rem; background: rgb(var(--color-background)); border-radius: 6px;">
+                <h3 style="font-size:16px; font-weight:400; margin-bottom: .5rem;">
+                  {{ filter.label }}
+                </h3>
+                <ul class="filter-options" style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:.25rem;">
+                  {%- for value in filter.values limit:3 -%}
+                    <li>
+                      <label style="cursor:pointer;">
+                        <input type="checkbox"
+                               name="{{ value.param_name }}"
+                               value="{{ value.value }}"
+                               {% if value.active %}checked{% endif %}>
+                        {{ value.label }}
+                      </label>
+                    </li>
+                  {%- endfor -%}
+                </ul>
 
-                      render 'price-filter', filter: filter, filter_style: 'vertical', should_render_clear: false, autofocus: should_autofocus
-                    -%}
-                  {% else %}
-                    {% liquid
-                      if filter.active_values.size > 0
-                        assign is_active = true
-                      endif
+                {% if filter.values.size > 3 %}
+                  <button type="button" class="show-more" data-target="filter-{{ forloop.index }}" style="margin-top:.5rem; background:none; border:none; color:var(--color-accent); cursor:pointer; font-size:14px;">
+                    + Ver más
+                  </button>
+                  <ul id="filter-{{ forloop.index }}" class="filter-options--hidden" style="display:none; list-style:none; padding:0; margin-top:.5rem; display:flex; flex-direction:column; gap:.25rem;">
+                    {%- for value in filter.values offset:3 -%}
+                      <li>
+                        <label style="cursor:pointer;">
+                          <input type="checkbox"
+                                 name="{{ value.param_name }}"
+                                 value="{{ value.value }}"
+                                 {% if value.active %}checked{% endif %}>
+                          {{ value.label }}
+                        </label>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {% endif %}
+              </div>
+            {%- endfor -%}
+          </div>
 
-                      assign active_value_count = filter.active_values | size
-                      assign total_active_values = total_active_values | plus: active_value_count
-                      render 'list-filter', filter: filter, filter_style: 'vertical', active_value_count: active_value_count, should_render_clear: false, autofocus: should_autofocus, in_drawer: true, sectionId: section.id
-                    %}
-                {% endcase %}
-              {%- endfor -%}
-            </div>
-          {% endif %}
-
-          {% if block_settings.enable_sorting %}
-            {% render 'sorting',
-              results: results,
-              sort_by: sort_by,
-              filter_style: block_settings.filter_style,
-              suffix: 'overflow',
-              should_use_select_on_mobile: should_use_select_on_mobile,
-              section_id: section.id
-            %}
-          {% endif %}
         </form>
       </facets-form-component>
-
-      {% render 'facets-actions',
-        results_url: results_url,
-        is_active: is_active,
-        products_count: products_count,
-        form_component: form_component,
-        should_show_clear_all: true
-      %}
     </dialog>
   </dialog-component>
 {% endif %}
@@ -488,7 +521,7 @@
 
   dialog-component.facets-block-wrapper:not(:has(.facets--drawer[open])) {
     @media screen and (min-width: 750px) {
-      display: none;
+      display: flex;
     }
   }
 
@@ -579,6 +612,7 @@
     }
   }
 
+  
   .facets--drawer {
     border-radius: 0;
     border-right: var(--style-border-drawer);
@@ -592,6 +626,7 @@
     justify-content: space-between;
   }
 
+  
   .facets.facets-controls-wrapper {
     @media screen and (min-width: 750px) {
       grid-column: column-1 / column-12;
@@ -618,11 +653,13 @@
     padding-block-end: var(--padding-sm);
   }
 
+  .filter-button {
+    font-size: 16px;
+  }
   /* Facets - Form */
   .facets__form-wrapper {
     display: flex;
     flex-direction: column;
-    color: var(--color-foreground-muted);
     width: 100%;
   }
 
@@ -656,7 +693,7 @@
   .facets--horizontal .facets__filters-wrapper {
     @media screen and (min-width: 750px) {
       max-width: 60%;
-      display: flex;
+      display: none;
       flex-wrap: wrap;
       column-gap: var(--gap-xl);
       margin-inline-end: 0;
@@ -1053,6 +1090,102 @@
       z-index: var(--facets-open-z-index);
     }
   }
+
+/* Filtros sidebar en desktop */
+.facets__filters-wrapper{
+  display: block
+}
+
+.facets-toggle__wrapper--mobile {
+  display: block;
+}
+
+@media screen and (min-width: 750px) {
+  .facets-toggle__wrapper--mobile {
+    display: none;
+  }
+}
+/* Botones filtros sidebar */
+.button.button--primary {
+  padding: .75rem 1rem;               
+  border-radius: 0px;
+  background-color: black;     
+  color: white;
+  border: solid 1px black
+}
+
+.button.button--primary:hover,
+.button.button--primary:focus,
+.button.button--primary:active {
+  background-color: #000;
+  color: #000;
+}
+
+.button.button--primary:focus-visible {
+  outline: 3px solid rgba(0,0,0,.12);
+  outline-offset: 3px;
+}
+
+.facets--drawer .button.button--primary:hover {
+  background-color: white;
+  color: #000;
+}
+
+
+/* Sidebar Desktop */
+@media screen and (min-width: 750px) {
+  .facets--drawer.dialog-drawer--right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    height: 100vh;
+    width: var(--drawer-width, 360px);
+    transform: translateX(100%);     
+    transition: transform .35s cubic-bezier(.25, .9, .25, 1);
+    will-change: transform;
+    z-index: var(--facets-open-z-index, 9999);
+    display: flex; 
+    flex-direction: column;
+  }
+
+  .facets--drawer.dialog-drawer--right[open] {
+    transform: translateX(0);
+  }
+
+  .facets--drawer.dialog-drawer--right {
+    animation: none !important;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 749px) {
+  dialog.facets--drawer.dialog-drawer--right,
+  dialog.dialog-drawer--right {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    height: var(--drawer-height, 50vh);
+    transform: translateY(100%) !important;
+    transition: transform .28s ease;
+    z-index: var(--facets-open-z-index, 9999);
+  }
+  dialog.facets--drawer.dialog-drawer--right[open],
+  dialog.dialog-drawer--right[open] {
+    transform: translateY(0) !important;
+  }
+
+  dialog.facets--drawer.dialog-drawer--right,
+  dialog.dialog-drawer--right {
+    animation: none !important;
+  }
+}
+
+dialog[open]::backdrop {
+  background: rgba(0,0,0,0.35);
+}
 {% endstylesheet %}
 
 {% schema %}
@@ -1229,4 +1362,6 @@
     }
   ]
 }
+
+
 {% endschema %}

@@ -1,0 +1,7 @@
+<nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+  <a href="/" title="Home">Inicio</a>
+  {% if template == 'collection' %}
+    <span aria-hidden="true">›</span>
+    <span>{{ collection.title }}</span>
+  {% endif %}
+</nav>

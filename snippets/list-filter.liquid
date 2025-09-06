@@ -91,9 +91,13 @@
             </span>
           </facet-status-component>
         {% endif %}
+        {% comment  %} 
+        Quita el icono svg del campo ordenar para hacerlo igual que la web original
+        
         <span class="svg-wrapper icon-caret icon-animated">
           {{- 'icon-caret.svg' | inline_asset_content -}}
         </span>
+         {% endcomment %}
       </div>
     </summary>
     <floating-panel-component
