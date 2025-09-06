@@ -248,7 +248,7 @@
                       "type": "popup-link",
                       "name": "Guía de tallas",
                       "settings": {
-                        "behavior": "drawer",
+                        "behavior": "default",
                         "heading": "Guía de tallas",
                         "type_preset": "",
                         "padding-block-start": 0,
@@ -610,7 +610,7 @@
               "name": "t:names.accordion",
               "settings": {
                 "icon": "caret",
-                "dividers": true,
+                "dividers": false,
                 "type_preset": "h5",
                 "inherit_color_scheme": true,
                 "color_scheme": "",
@@ -670,7 +670,7 @@
                   "name": "Composición",
                   "settings": {
                     "heading": "COMPOSICIÓN",
-                    "open_by_default": true,
+                    "open_by_default": false,
                     "icon": "none",
                     "width": 20
                   },
@@ -711,7 +711,7 @@
                   "name": "Envíos",
                   "settings": {
                     "heading": "ENVÍOS",
-                    "open_by_default": true,
+                    "open_by_default": false,
                     "icon": "none",
                     "width": 20
                   },
@@ -752,7 +752,7 @@
                   "name": "Devoluciones",
                   "settings": {
                     "heading": "DEVOLUCIONES",
-                    "open_by_default": true,
+                    "open_by_default": false,
                     "icon": "none",
                     "width": 20
                   },
@@ -793,7 +793,7 @@
                   "name": "¿Necesitas ayuda?",
                   "settings": {
                     "heading": "¿NECESITAS AYUDA?",
-                    "open_by_default": true,
+                    "open_by_default": false,
                     "icon": "none",
                     "width": 20
                   },
@@ -834,7 +834,7 @@
                   "name": "Compartir",
                   "settings": {
                     "heading": "COMPARTIR",
-                    "open_by_default": true,
+                    "open_by_default": false,
                     "icon": "none",
                     "width": 20
                   },
