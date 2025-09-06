@@ -313,7 +313,7 @@
                     },
                     "popup_link_3wK3Xa": {
                       "type": "popup-link",
-                      "name": "Guía de tallas",
+                      "name": "Disponibilidad en tienda",
                       "settings": {
                         "behavior": "default",
                         "heading": "Disponibilidad en tienda",
@@ -335,7 +335,7 @@
                             "custom_width": 100,
                             "width_mobile": "fill",
                             "custom_width_mobile": 100,
-                            "height": "fit",
+                            "height": "fill",
                             "border": "none",
                             "border_width": 1,
                             "border_opacity": 100,
