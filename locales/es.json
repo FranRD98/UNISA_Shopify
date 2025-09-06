@@ -264,7 +264,7 @@
   },
   "products": {
     "product": {
-      "add_to_cart": "Agregar al carrito",
+      "add_to_cart": "Añadir a cesta",
       "added_to_cart": "Agregado al carrito",
       "adding_to_cart": "Agregando...",
       "add_to_cart_error": "Error al agregar al carrito",
