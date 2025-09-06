@@ -33,17 +33,29 @@
       disabled
     {% endunless %}
   >
-    <span
-      class="add-to-cart-text"
-    >
+    <span class="add-to-cart-text">
       {% if can_add_to_cart %}
+
+        {% comment %}
+          COPIA DE SEGURIDAD - Así estaba anteriormente
+            <span class="svg-wrapper add-to-cart-icon">
+              {{- 'icon-add-to-cart.svg' | inline_asset_content -}}
+            </span>
+        {% endcomment %}
+
+        {% comment %} Icono + para añadir al carrito de forma rápida {% endcomment %}
         <span class="svg-wrapper add-to-cart-icon">
-          {{- 'icon-add-to-cart.svg' | inline_asset_content -}}
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2"/>
+            <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </span>
+
+        <span class="add-to-cart-text__content{% if icon_only_on_mobile %} is-visually-hidden-mobile{% endif %}">
+          {{- add_to_cart_text | default: default_add_to_cart_text -}}
         </span>
       {% endif %}
-      <span class="add-to-cart-text__content{% if icon_only_on_mobile %} is-visually-hidden-mobile{% endif %}">
-        {{- add_to_cart_text | default: default_add_to_cart_text -}}
-      </span>
+
     </span>
     <span
       aria-hidden="true"
@@ -52,9 +64,14 @@
       <span class="svg-wrapper add-to-cart-icon--added">
         {{- 'icon-checkmark.svg' | inline_asset_content -}}
       </span>
+      {% comment %}
+      Quitamos el texto una vez se ha añadido el artículo al carrito, dejamos que solo se vea el icono de checkmark.
+      
       <span class="{% if icon_only_on_mobile %}is-visually-hidden-mobile{% endif %}">
         {{- 'actions.added' | t -}}
       </span>
+      {% endcomment %}
+
     </span>
   </button>
 </add-to-cart-component>
@@ -65,55 +82,62 @@
     gap: var(--gap-2xs);
     align-items: center;
     justify-content: center;
-    animation-duration: var(--animation-speed);
-    animation-timing-function: var(--animation-easing);
-    animation-fill-mode: forwards;
-    transition: opacity var(--animation-speed) var(--animation-easing);
-  }
-
-  .atc-added .add-to-cart-text {
-    animation-name: atc-slide-out;
   }
 
   .add-to-cart-text--added {
     position: absolute;
     inset: 0;
-    animation-duration: var(--animation-speed);
-    animation-timing-function: var(--animation-easing);
-    animation-fill-mode: forwards;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: width var(--animation-speed) var(--animation-easing),
-      opacity var(--animation-speed) var(--animation-easing);
   }
 
-  .atc-added .add-to-cart-text--added {
-    animation-name: atc-slide-in;
-  }
+  /* Centrar icono siempre */
+.quick-add {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
 
-  @keyframes atc-slide-in {
-    from {
-      opacity: 0;
-      transform: translateY(0.5em);
-    }
+/* Deshabilitar animaciones y hover */
+.quick-add__button .add-to-cart-text,
+.quick-add__button .add-to-cart-text--added {
+  animation: none !important;
+  transition: none !important;
+}
 
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+/* Evitar cambios por hover */
+.quick-add__button:hover .add-to-cart-text,
+.quick-add__button:hover .add-to-cart-text--added {
+  transform: none !important;
+  opacity: 1 !important;
+}
 
-  @keyframes atc-slide-out {
-    from {
-      transform: translateY(0);
-      opacity: 1;
-    }
+/* Cuando se añade al carrito */
+.quick-add__button.atc-added .add-to-cart-text {
+  opacity: 0 !important; /* el + desaparece */
+}
 
-    to {
-      transform: translateY(-1em);
-      opacity: 0;
-    }
-  }
+.quick-add__button.atc-added .add-to-cart-text--added {
+  opacity: 1 !important; /* el tick aparece */
+}
+
+.add-to-cart-button {
+  background-color: #1E1D1C;
+  color: white;
+  padding: 12px;
+  border-radius: 0px;
+  font-size: 16px;
+  border: solid 1px transparent;
+  transition: none;
+}
+
+.add-to-cart-button:hover {
+  background-color: white;
+  color: #1E1D1C;
+  border: solid 1px #1E1D1C;
+}
+
+
 {% endstylesheet %}
