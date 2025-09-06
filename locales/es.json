@@ -74,7 +74,7 @@
     "nested_product": "{{ product_title }} para {{ parent_title }}"
   },
   "actions": {
-    "add_to_cart": "Agregar al carrito",
+    "add_to_cart": "Añadir a cesta",
     "clear_all": "Borrar todo",
     "remove": "Eliminar",
     "view_in_your_space": "Ver en tu espacio",
