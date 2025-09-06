@@ -4470,3 +4470,7 @@ text-component {
   color: #666;
   margin-right: 1em;
 }
+
+product-card {
+  background-color: #f6f6f6;
+}
