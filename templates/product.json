@@ -968,6 +968,7 @@
       },
       "custom_css": [
         ".add-to-cart-icon {display: none;}",
+        ".variant-option.variant-option--dropdowns label {display: none;}",
         ".extra-colors {display: none;}",
         "select {background-color: white; text-align: center; font-size: 16px; text-transform: uppercase;}",
         ".variant-option__select-wrapper {border-color: black;}",
