@@ -974,7 +974,7 @@
         ".variant-option__select-wrapper {border-color: black;}",
         "button.button.button-unstyled.popup-link__button.text-left.spacing-style svg {display: none;}",
         "add-to-cart-component {text-transform: uppercase;}",
-        "add-to-cart-component:hover {color: black; background-color: white}"
+        "add-to-cart-component button:hover {color: black; background-color: white;}"
       ],
       "settings": {
         "content_width": "content-full-width",
