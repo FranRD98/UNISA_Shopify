@@ -430,8 +430,7 @@
         "group_DWK7hP"
       ],
       "custom_css": [
-        "p {color: white;}",
-        ".section-content-wrapper {scroll-snap-type: y mandatory;}"
+        "p {color: white;}"
       ],
       "name": "t:names.custom_section",
       "settings": {
