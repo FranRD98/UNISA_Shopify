@@ -174,7 +174,8 @@
         "group_R4mPAN"
       ],
       "custom_css": [
-        "a {font-size: 16px; font-weight: 100;}"
+        "a {font-size: 16px; font-weight: 100; text-transform: uppercase;}",
+        "a:hover {text-decoration: underline;}"
       ],
       "name": "t:names.custom_section",
       "settings": {
