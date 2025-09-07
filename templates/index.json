@@ -720,8 +720,7 @@
         "group_DWK7hP"
       ],
       "custom_css": [
-        "p {color: white;}",
-        ".section-content-wrapper {height: 100vh; /* pantalla completa */ overflow-y: scroll; scroll-snap-type: y mandatory; /* scroll “snap” vertical */ scroll-behavior: smooth; /* scroll animado */ display: flex; flex-direction: column; /* Ocultar scrollbar */ scrollbar-width: none;}"
+        "p {color: white;}"
       ],
       "name": "t:names.custom_section",
       "settings": {
