@@ -105,6 +105,49 @@
               },
               "blocks": {}
             },
+            "popup_link_9Bkzi8": {
+              "type": "popup-link",
+              "name": "t:names.popup_link",
+              "settings": {
+                "behavior": "drawer",
+                "heading": "Learn more",
+                "type_preset": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_Pewf6E": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h2>What is the return policy?</h2>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 16,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_Pewf6E"
+              ]
+            },
             "text_z9WbCq": {
               "type": "text",
               "name": "t:names.text",
@@ -160,6 +203,7 @@
           },
           "block_order": [
             "icon_EcjX8V",
+            "popup_link_9Bkzi8",
             "text_z9WbCq",
             "text_WkYNEq"
           ]
@@ -542,7 +586,7 @@
               "name": "t:names.icon",
               "settings": {
                 "icon": "price_tag",
-                "image_upload": "shopify://shop_images/faq-pedido.png",
+                "image_upload": "shopify://shop_images/faq-disponibilidad.png",
                 "width": 150,
                 "link": "",
                 "open_in_new_tab": false
@@ -553,7 +597,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>PEDIDO</p>",
+                "text": "<p>DISPONIBILIDAD ONLINE & TIENDAS</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -579,7 +623,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Cómo comprar, condiciones...</p>",
+                "text": "<p>¿Dónde puedo encontrar un modelo concreto?</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -653,7 +697,7 @@
               "name": "t:names.icon",
               "settings": {
                 "icon": "price_tag",
-                "image_upload": "shopify://shop_images/faq-pedido.png",
+                "image_upload": "shopify://shop_images/faq-dev-reembolso.png",
                 "width": 150,
                 "link": "",
                 "open_in_new_tab": false
@@ -664,7 +708,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>PEDIDO</p>",
+                "text": "<p>CUIDADO DEL CALZADO</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -690,7 +734,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Cómo comprar, condiciones...</p>",
+                "text": "<p>Cómo limpiar según el material</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -764,7 +808,7 @@
               "name": "t:names.icon",
               "settings": {
                 "icon": "price_tag",
-                "image_upload": "shopify://shop_images/faq-pedido.png",
+                "image_upload": "shopify://shop_images/faq-cuenta.png",
                 "width": 150,
                 "link": "",
                 "open_in_new_tab": false
@@ -775,7 +819,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>PEDIDO</p>",
+                "text": "<p>MI CUENTA & CONTRASEÑA</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -801,7 +845,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Cómo comprar, condiciones...</p>",
+                "text": "<p>¿Cómo accedo a mi cuenta?</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
