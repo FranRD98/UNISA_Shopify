@@ -18,7 +18,9 @@
     {% case section.settings.layout_type %}
       {% when 'grid' %}
         .product-grid--{{ section.id }}:is(.product-grid--grid) {
-          --product-grid-columns-desktop: repeat(auto-fill, minmax({{ product_card_size }}, 1fr));
+          /*--product-grid-columns-desktop: repeat(auto-fill, minmax({{ product_card_size }}, 1fr));*/
+          --product-grid-columns-desktop: repeat(4, 1fr); /* Solo se verán 4 productos con la grid por default */
+
         }
       {% when 'organic' %}
         {% assign large_span = 2 %}
@@ -48,14 +50,16 @@
       {% when 'extra-large' or 'large' %}
         @container product-grid (max-width: calc({{ product_card_size }} * 3 + {{ section.settings.columns_gap_horizontal }}px * 2)) {
           .product-grid--{{ section.id }}:is(.product-grid--grid) {
-            --product-grid-columns-desktop: repeat(2, 1fr);
+          --product-grid-columns-desktop: repeat(2, 1fr); /* Solo se verán 2 productos con la grid por default */
           }
         }
     {% endcase %}
 
     /* When zoomed out, fit as many 100px-wide columns as possible */
     .product-grid--{{ section.id }}:is([product-grid-view='zoom-out']) {
-      --product-grid-columns-desktop: repeat(auto-fill, minmax(6.25rem, 1fr));
+      /*--product-grid-columns-desktop: repeat(auto-fill, minmax(6.25rem, 1fr));*/
+      --product-grid-columns-desktop: repeat(2, 1fr);
+
     }
 
     .product-grid--{{ section.id }}:is([product-grid-view='zoom-out']) .product-grid-view-zoom-out--details {
