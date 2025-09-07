@@ -9,6 +9,17 @@
  */
 {
   "sections": {
+    "custom_liquid_C7JQzp": {
+      "type": "custom-liquid",
+      "name": "HERO SECTION (Mala Practica)",
+      "settings": {
+        "custom_liquid": "<div class=\"hero-scroll-wrapper\">\n\n  <!-- HERO 1 VIDEO -->\n  <section class=\"hero-section\" id=\"hero-1-video\">\n    <div class=\"hero-video\">\n      <video autoplay muted loop playsinline>\n        <source src=\"https://cdn.shopify.com/videos/c/o/v/1d091978457d40f993cb5313ab6a5404.webm\" type=\"video/webm\">\n        Tu navegador no soporta el vídeo HTML5.\n      </video>\n      <a href=\"/collections/nueva-coleccion-aw25\" class=\"hero-text hero-text-right\">Nueva Colección &gt;</a>\n    </div>\n  </section>\n\n  <!-- HERO 2 -->\n  <section class=\"hero-section\" id=\"hero-2\">\n    <div class=\"hero-image\" style=\"background-image: url('{{ 'https://cdn.shopify.com/s/files/1/0956/3514/5051/files/Hero_Image_1.jpg?v=1756295215' }}');\">\n      <a href=\"/collections/novedades\" class=\"hero-text hero-text-right\">Office style &gt;</a>\n    </div>\n  </section>\n\n  <!-- HERO 3 -->\n  <section class=\"hero-section\" id=\"hero-3\">\n    <div class=\"hero-image\" style=\"background-image: url('{{ 'https://cdn.shopify.com/s/files/1/0956/3514/5051/files/Hero_Image_2.jpg?v=1756295215' }}');\">\n      <a href=\"/collections/rebajas\" class=\"hero-text hero-text-center\" style=\"color:#fd0000;\">Hasta el -50% &gt;</a>\n    </div>\n  </section>\n\n  <!-- HERO 4 SPLIT 50/50 -->\n  <section class=\"hero-section\" id=\"hero-4\">\n    <div class=\"hero-split\">\n      <div class=\"hero-image\" style=\"background-image: url('{{ 'https://cdn.shopify.com/s/files/1/0956/3514/5051/files/Hero_Image_3_1.jpg?v=1756295215' }}');\">\n        <a href=\"/collections/party\" class=\"hero-text hero-text-left\">Party sandals &gt;</a>\n      </div>\n      <div class=\"hero-image\" style=\"background-image: url('{{ 'https://cdn.shopify.com/s/files/1/0956/3514/5051/files/Hero_Image_3_2.jpg?v=1756295215' }}');\">\n        <a href=\"/collections/bolsos\" class=\"hero-text hero-text-right\">Bolsos &gt;</a>\n      </div>\n    </div>\n  </section>\n\n</div>",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "hero_DVekj8": {
       "type": "hero",
       "blocks": {
@@ -719,6 +730,7 @@
         "group_yYB9DY",
         "group_DWK7hP"
       ],
+      "disabled": true,
       "custom_css": [
         "p {color: white;}"
       ],
@@ -1548,6 +1560,7 @@
     }
   },
   "order": [
+    "custom_liquid_C7JQzp",
     "hero_DVekj8",
     "hero_K9DAx9",
     "hero_eLEaQF",
