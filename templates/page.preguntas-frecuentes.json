@@ -105,49 +105,6 @@
               },
               "blocks": {}
             },
-            "popup_link_9Bkzi8": {
-              "type": "popup-link",
-              "name": "t:names.popup_link",
-              "settings": {
-                "behavior": "drawer",
-                "heading": "Learn more",
-                "type_preset": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "text_Pewf6E": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h2>What is the return policy?</h2>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 16,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_Pewf6E"
-              ]
-            },
             "text_z9WbCq": {
               "type": "text",
               "name": "t:names.text",
@@ -203,7 +160,6 @@
           },
           "block_order": [
             "icon_EcjX8V",
-            "popup_link_9Bkzi8",
             "text_z9WbCq",
             "text_WkYNEq"
           ]
