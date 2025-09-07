@@ -520,7 +520,7 @@ endif
       padding-inline: 0 var(--padding-3xs);
 
       .header-logo {
-        grid-area: center;
+        grid-area: leftB;
       }
 
       &:not(:has(header-actions)) .search-action {
@@ -532,7 +532,7 @@ endif
       }
 
       .search-action {
-        grid-area: center;
+        grid-area: rightB;
       }
 
       header-actions {
@@ -636,6 +636,48 @@ endif
       margin-top: calc(var(--header-height) * var(--transparent-header-offset-boolean) * -1);
     }
   }
+
+  /* CUSTOM CSS */
+  @media screen and (min-width: 749px) {
+  /* Separa los elementos del header-action con la search */
+  header-actions {
+    gap: 60px;
+    margin-left: 60px !important;
+  }
+}
+
+  /* Adapta el header para movil */
+  @media screen and (max-width: 749px) {
+    .header__columns {
+      grid-template-areas: 'leftA leftB rightA rightB';
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      column-gap: var(--gap-xs);
+    }
+    .header-drawer {
+      grid-area: leftA;
+      justify-self: start
+    }
+    .header-logo { 
+      grid-area: leftA; 
+      justify-self: start
+    }
+    .search-action { 
+      grid-area: rightB; 
+      justify-self: center; 
+    }
+    header-actions { 
+      grid-area: rightB; 
+      justify-self: end; 
+    }
+  }
+
+/* Evitar que "Iniciar sesión" se divida en dos líneas */
+.header__column--right .account-button {
+  white-space: nowrap; /* evita salto de línea */
+}
+
+  
 {% endstylesheet %}
 
 {% unless request.design_mode %}

@@ -21,6 +21,8 @@
       >
         {{ 'icon-search.svg' | inline_asset_content }}
       </span>
+      <span class="search-text">Buscar</span>
+
     </button>
   </search-button>
 {% endunless %}
@@ -49,4 +51,27 @@
       margin-inline: calc(var(--gap-md) * -1) calc(var(--gap-xs) * -1);
     }
   }
+
+  /* CUSTOM CSS */
+  /* Texto de buscar producto */
+  .search-text {
+      font-size: 18px;
+      line-height: 1.2;
+      margin-left: 6px;
+      color: currentColor; 
+      display: inline-block;
+  }
+
+  @media screen and (max-width: 749px) {
+    /* Mostrar texto de búsqueda en móvil */
+    search-button button span svg {
+      display: block;
+    }
+
+    /* Escondemos el texto de búsqueda en móvil */
+    .search-text {
+      display: none;
+    }
+  }
+
 {% endstylesheet %}

@@ -41,6 +41,8 @@
     >
       {{- 'icon-account.svg' | inline_asset_content -}}
     </span>
+    <span class="account-login-text">Iniciar sesión</span>
+
   {%- endif -%}
 </{{ tag }}>
 
@@ -87,4 +89,32 @@
   .account-button shop-user-avatar {
     pointer-events: none;
   }
+
+  /* CUSTOM CSS */
+  /* Texto Iniciar sesión */
+      .account-login-text {
+      font-size: 18px;
+      line-height: 1.2;
+      margin-left: 6px;
+      color: currentColor; 
+      display: inline-block;
+    }
+
+  /* Esconder icono de login en desktop POR DEFECTO */
+  .account-button__icon {
+    display: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    /* Mostrar icono de login en móvil */
+    .account-button__icon {
+      display: block;
+    }
+
+    /* Escondemos el texto de login en móvil */
+    .account-login-text {
+      display: none;
+    } 
+  }
+
 {% endstylesheet %}

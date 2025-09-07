@@ -27,6 +27,8 @@
     aria-label="{{ 'accessibility.open_cart_drawer' | t }} {{ 'accessibility.cart_count' | t}}: {{ cart.item_count }}"
   >
     {% render 'cart-icon-component' %}
+    <span class="cart-text">Mi cesta</span>
+
   </button>
 
   <dialog
@@ -167,5 +169,32 @@
     position: sticky;
     bottom: 0;
     z-index: 1;
+  }
+  
+  /* CUSTOM CSS */
+  /* Texto de cesta / carrito */
+  .cart-text {
+    font-size: 18px;
+    line-height: 1.2;
+    margin-left: 6px;
+    color: currentColor;
+    display: inline-block;
+  }
+
+  /* Esconder icono de cesta en desktop POR DEFECTO */
+  cart-drawer-component button cart-icon {
+    display: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    /* Mostrar icono de cesta en móvil */
+    cart-drawer-component button cart-icon {
+      display: block;
+    }
+
+    /* Escondemos el texto de cesta en móvil */
+    .cart-text {
+      display: none;
+    } 
   }
 {% endstylesheet %}

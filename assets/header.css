@@ -37,15 +37,6 @@ announcement-bar-component slideshow-arrows {
   .menu-list__link-title {
   color: #e02020;
 }
-/*
-@media screen and (max-width: 749px) {
-  .search-text,
-  .account-text,
-  .cart-text {
-    display: none;
-  }
-}
-*/
 
 /* ===== HERO SECTION SCROLL ===== */
 
