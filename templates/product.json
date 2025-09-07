@@ -158,7 +158,7 @@
                   "type": "variant-picker",
                   "settings": {
                     "variant_style": "dropdowns",
-                    "show_swatches": false,
+                    "show_swatches": true,
                     "alignment": "center",
                     "padding-block-start": 0,
                     "padding-block-end": 0,
