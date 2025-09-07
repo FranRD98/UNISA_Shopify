@@ -39,7 +39,7 @@
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
             "gap": 0,
-            "width": "custom",
+            "width": "fit-content",
             "custom_width": 20,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
@@ -172,6 +172,9 @@
       "block_order": [
         "group_mCfNNc",
         "group_R4mPAN"
+      ],
+      "custom_css": [
+        "a {font-size: 16px; font-weight: 100;}"
       ],
       "name": "t:names.custom_section",
       "settings": {
