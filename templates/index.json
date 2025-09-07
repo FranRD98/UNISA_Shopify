@@ -41,6 +41,7 @@
       "block_order": [
         "text_DyjpM4"
       ],
+      "disabled": true,
       "custom_css": [
         ".hero__container {scroll-snap-align: start; min-block-size: 100vh; scroll-snap-stop: always; display: flex; align-items: center; justify-content: center;}"
       ],
@@ -105,6 +106,7 @@
       "block_order": [
         "text_Rgntmr"
       ],
+      "disabled": true,
       "custom_css": [
         ".hero__container {scroll-snap-align: start; min-block-size: 100vh; scroll-snap-stop: always; display: flex; align-items: center; justify-content: center;}"
       ],
@@ -170,6 +172,7 @@
       "block_order": [
         "text_k8xnzd"
       ],
+      "disabled": true,
       "custom_css": [
         ".hero__container {scroll-snap-align: start; min-block-size: 100vh; scroll-snap-stop: always; display: flex; align-items: center; justify-content: center;}"
       ],
@@ -261,8 +264,9 @@
         "text_nxKGEX",
         "text_BzXfnR"
       ],
+      "disabled": true,
       "custom_css": [
-        ".hero__container {scroll-snap-align: start;min-block-size: 100vh;scroll-snap-stop: always;display: flex;align-items: center;justify-content: center;}"
+        ".hero__container {scroll-snap-align: start; min-block-size: 100vh; scroll-snap-stop: always; display: flex; align-items: center; justify-content: center;}"
       ],
       "name": "t:names.hero",
       "settings": {
@@ -715,7 +719,6 @@
         "group_yYB9DY",
         "group_DWK7hP"
       ],
-      "disabled": true,
       "custom_css": [
         "p {color: white;}"
       ],
