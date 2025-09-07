@@ -644,8 +644,6 @@
     }
   },
   "platform_customizations": {
-    "custom_css": [
-      "html {scroll-snap-type: y mandatory;}"
-    ]
+    "custom_css": []
   }
 }
