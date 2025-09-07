@@ -720,7 +720,8 @@
         "group_DWK7hP"
       ],
       "custom_css": [
-        "p {color: white;}"
+        "p {color: white;}",
+        ".section-content-wrapper {background-color: green;}"
       ],
       "name": "t:names.custom_section",
       "settings": {
