@@ -4495,7 +4495,12 @@ dialog-component.popup-link {
 }
 
 .facets__label {
-  font-size: 16px; /* Cambia el tamaño del texto de ordenar */
+  font-size: 16px; /* Cambia el tamaño del texto del sidebar de filtro */
+}
+
+/* Pone en mayuscula el nombr de la opción de filtrado de la sidebar de filtros */
+summary.facets__summary .facets__label {
+  text-transform: uppercase;
 }
 
 /* Esconde el botón de limpiar filtro */
