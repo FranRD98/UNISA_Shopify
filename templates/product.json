@@ -157,7 +157,7 @@
                 "variant_picker_zJTDqj": {
                   "type": "variant-picker",
                   "settings": {
-                    "variant_style": "buttons",
+                    "variant_style": "dropdowns",
                     "show_swatches": true,
                     "alignment": "center",
                     "padding-block-start": 0,
