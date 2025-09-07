@@ -68,12 +68,12 @@
   endif
 
   if section.settings.search_position == 'left'
-    if shop.customer_accounts_enabled
-      assign order = 'mobile_search,logo,search,menu,localization,actions'
-    else
-      assign order = 'logo,search,menu,localization,mobile_search,actions'
-    endif
+  if shop.customer_accounts_enabled
+    assign order = 'logo,menu,mobile_search,search,localization,actions'
+  else
+    assign order = 'logo,menu,search,localization,mobile_search,actions'
   endif
+endif
   capture search
     render 'search', style: search_style, class: search_class
   endcapture
@@ -179,6 +179,8 @@
   {% endif %}
   data-skip-node-update
   data-scroll-direction="none"
+    data-search-position="{{ section.settings.search_position }}"
+
 >
   {% for row in rows %}
     {% liquid
@@ -449,6 +451,20 @@
     }
   }
 
+  @media screen and (max-width: 749px) {
+  .search-action {
+    grid-area: leftB; /* default */
+  }
+
+  header-component[data-search-position="right"] .search-action {
+    grid-area: rightA; /* mueve la lupa a la derecha */
+  }
+
+  header-actions {
+    grid-area: rightB;
+  }
+}
+
   .header__columns {
     /* Three column layout */
     --header-left: 1fr;
@@ -516,7 +532,7 @@
       }
 
       .search-action {
-        grid-area: leftB;
+        grid-area: center;
       }
 
       header-actions {
